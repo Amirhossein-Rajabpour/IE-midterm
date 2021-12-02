@@ -59,6 +59,7 @@ function checkName(name){
 
 
 function getName(event){
+    event.preventDefault();
     let name_user = document.getElementById("fname").value;
 
     name_verified = checkName(name_user);
