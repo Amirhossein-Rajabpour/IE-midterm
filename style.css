@@ -1,3 +1,4 @@
+/* Setting background image and its properties */
 body {
     background-image: url("back2.jpg");
     background-repeat: no-repeat;
@@ -9,10 +10,10 @@ body {
     align-items: center;
 }
 
+/* This is the grid container that has three items in it. It has two columns */
 .main {
     width: fit-content;
     height: 300;
-    /* height: 30%; */
     margin-top: 10%;
     display: grid;
     grid-template-columns: auto auto;
@@ -23,9 +24,9 @@ body {
     background-color: #8f9fa1b4
 }
 
+/* This is the left item in the grid that covers row 1 and 2 and column 1. Our from is in this item */
 .form {
     text-align: left;
-    /* border: solid; */
     border-color: black;
     margin: 10px;
     grid-column: 1;
@@ -34,24 +35,25 @@ body {
     margin-right: 20px;
 }
 
+/* This is the second item that has the result of predition in it. in colmn 2 and row 1 */
 .prediction {
     text-align: left;
-    /* border: solid; */
     border-color: black;
     margin: 10px;
     padding: 5px;
 }
 
+/* This is the third item in column 2 and row 2 that has the saved answer and clear button in it*/
 .saved-answer {
     text-align: left;
     border: dotted;
     border-color: black;
-    
     margin: 10px;
     padding: 5px;
     padding-right: 15px;
 }
 
+/* Here all the three buttons (submit, save, clear) are styled */
 .button {
     margin: 5px;
     height: 27px;
@@ -63,6 +65,7 @@ body {
     border-radius : 2px;
 }
 
+/* This is just for fun. When you hover over the buttons their shapes change a little */
 .button:hover {
     background-color: rgb(78, 143, 180);
     color: white;
