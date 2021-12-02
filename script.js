@@ -58,7 +58,7 @@ function checkName(name){
 }
 
 
-function getName(event){
+function getName(){
     event.preventDefault();
     let name_user = document.getElementById("fname").value;
 
