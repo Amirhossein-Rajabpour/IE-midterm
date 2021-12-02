@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gender Prediction</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="script.js" defer></script>
+    </head>
+
+    <body>
+
+    <div class="main">
+        <div class="form">
+            <h2>Mr. or Ms.?</h2>
+            <form action="/action_page.php">
+                <label for="Name">Name </label>
+                <input type="text" id="fname" name="fname"><br><br>
+
+                <input id="male-radio" type="radio" name="gender" value="Male">
+                <label for="male-radio">Male</label><br>
+                <input id="female-radio" type="radio" name="gender" value="Female">
+                <label for="female-radio">Female</label><br>
+
+                <input class="button" id="submit-btn" type="button" value="Submit" onclick="getName(event)"> <br>
+                <input class="button" id="save-btn" type="button" value="Save" onclick="saveName()">
+            </form>
+        </div>
+
+        <div class="prediction">
+            <h2>Prediction</h2>
+            <p>Gender: </p>
+            <p id="gender"></p>
+            <p>Probability: </p>
+            <p id="probability"></p>
+        </div>
+
+        <div class="saved-answer">
+            <h2>Saved Answer</h2><br>
+            <p id="saved"></p>
+            <input class="button" id="clear-btn" type="button" value="Clear" onclick="clearName()"> <br>
+        </div>
+    </div>
+
+    </body>
+</html>
