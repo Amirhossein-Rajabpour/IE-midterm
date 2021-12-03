@@ -50,7 +50,7 @@ function checkName(name){
     var myRegxp = /^[A-Za-z ]{1,255}$/;
     if(myRegxp.test(name) == false){
         console.log("error")
-        alert("Error!")
+        alert("Error! name format is not correct!")
         return false;
     }
     else{
@@ -58,9 +58,10 @@ function checkName(name){
     }
 }
 
-// This function takes the name and checks it (length and letters) and then check local storage and also calls the function that sends the request
-function getName(){
+// This part takes the name and checks it (length and letters) and then check local storage and also calls the function that sends the request
+document.getElementById("submit-btn").onclick = (event) => {
     event.preventDefault();
+
     let name_user = document.getElementById("fname").value;
 
     name_verified = checkName(name_user);
@@ -71,6 +72,7 @@ function getName(){
         sendRequest(name_user);
     }
 }
+
 
 // This function sends the request to webserver and convert response to json and then calls another function that displays the response
 function sendRequest(inputName){
