@@ -75,3 +75,8 @@ body {
 #submit-btn {
     margin-top: 40px;
 }
+
+/* Set fonts */
+h2, p, label, .button {
+    font-family: "Space Mono", monospace;
+}
