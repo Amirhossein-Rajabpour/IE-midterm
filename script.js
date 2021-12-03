@@ -61,9 +61,8 @@ function checkName(name){
 }
 
 // This part takes the name and checks it (length and letters) and then check local storage and also calls the function that sends the request
-document.getElementById("submit-btn").onclick = (event) => {
+function getName(event){
     event.preventDefault();
-
     let name_user = document.getElementById("fname").value;
 
     name_verified = checkName(name_user);
