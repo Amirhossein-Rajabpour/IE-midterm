@@ -15,11 +15,13 @@ function saveName(event){
         if (document.getElementById("male-radio").checked){
             console.log("male")
             localStorage.setItem(name_user, "male");
+            document.getElementsByClassName('saved-answer')[0].style.display = 'block';
             document.getElementById("saved").innerHTML = "male"
         }
         else{
             console.log("female")
             localStorage.setItem(name_user, "female");
+            document.getElementsByClassName('saved-answer')[0].style.display = 'block';
             document.getElementById("saved").innerHTML = "female"
         }
     }
@@ -32,6 +34,7 @@ function clearName(event){
     localStorage.removeItem(name_user);
     console.log("clearing...")  
     document.getElementById("saved").innerHTML = ""
+    document.getElementsByClassName('saved-answer')[0].style.display = 'none';
 }
 
 // This function check if we have the name in local storage and if we have it, it shows it
@@ -40,8 +43,19 @@ function checkLocalStorage(name){
         console.log("fetching from local storage...")
         console.log("new name is")
         state = localStorage.getItem(name);
-        console.log(state)
-        document.getElementById("saved").innerHTML = localStorage.getItem(name);
+        console.log(typeof state)
+
+
+        if (state !== null){
+            console.log("entered local storage")
+            document.getElementsByClassName('saved-answer')[0].style.display = 'block';
+            document.getElementById("saved").innerHTML = localStorage.getItem(name);
+        }
+        else {
+            console.log("didnt enter local storage")
+            document.getElementsByClassName('saved-answer')[0].style.display = 'none';
+        }
+
       } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
       }

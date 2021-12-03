@@ -47,6 +47,7 @@ body {
 .saved-answer {
     text-align: left;
     border: dotted;
+    display: none;
     border-color: black;
     margin: 10px;
     padding: 5px;
