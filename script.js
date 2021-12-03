@@ -6,7 +6,8 @@ function displayGender(response) {
 }
 
 // This function saves the name in local storage
-function saveName(){
+function saveName(event){
+    event.preventDefault();
     let name_user = document.getElementById("fname").value;
     console.log("saving name...")
     name_verified = checkName(name_user);
@@ -25,7 +26,8 @@ function saveName(){
 }
 
 // This function clears the name from local storage
-function clearName(){
+function clearName(event){
+    event.preventDefault();
     name_user = document.getElementById("fname").value;
     localStorage.removeItem(name_user);
     console.log("clearing...")  
